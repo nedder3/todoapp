@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Todo from "./todo";
+import "./todoApp.css";
 
 export default function TodoApp(){
     const[title,setTitle] = useState("hola");
@@ -42,7 +43,7 @@ export default function TodoApp(){
     }
 
     return( <div className="todoContainer">
-        <form className="todoCreateForm" onSubmit={handleSubmit}>
+        <form className="todoCreateForm" onSubmit={handleSubmit} >
             <input onChange={handleChange} className="todoInput" value={title}/>
              <input
               onClick={handleSubmit} 
